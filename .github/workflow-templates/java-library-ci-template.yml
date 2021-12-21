@@ -23,7 +23,7 @@ jobs:
   build:
     # This workflow defines how a maven package is built, tested and published.
     # Visit: https://github.com/samply/github-workflows/blob/develop/.github/workflows/maven-ci.yml, for more information
-    uses: samply/github-workflows/.github/workflows/maven-ci.yml@v1
+    uses: samply/github-workflows/.github/workflows/maven.yml@main
     with:
       # If you don't want to publish SNAPSHOTS and RELEASES of your library on https://oss.sonatype.org, opt-out with:
       # publish: false
