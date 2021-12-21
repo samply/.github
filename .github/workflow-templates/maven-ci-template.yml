@@ -1,0 +1,30 @@
+### This file provides a template for creating a GitHub Actions Workflow,
+### that builds, tests and pushes a java artifact with maven.
+
+name: Build, Test and Publish Java Artifacts with Maven
+
+on:
+  push:
+    branches:
+      - $default-branch
+      - develop
+  pull_request:
+    branches:
+      - $default-branch
+      - develop
+
+jobs:
+  build:
+    # This workflow defines how a maven package is build, tested and published.
+    # Visit: https://github.com/samply/github-workflows/blob/develop/.github/workflows/maven-ci.yml, for more information
+    uses: samply/github-workflows/.github/workflows/maven-ci.yml@develop
+    # For any of the options below, you need to remove the comment on "with:" too
+    # with:
+      # If you don't to publish artifacts on https://oss.sonatype.org, opt-out with:
+      # publish: false
+      # If your projects needs a version other than java 8 to build, you can specify it here:
+      # java-version: <number>
+      # If your projects needs a java distribution other than temurin to build, you can specify it here:
+      # java-distribution: "openjdk"
+      # If your projects builds needs additional command-line parameters for maven, e.g. another profile
+      # maven-command-line-parameters: "-P yourCustomMavenProfile"
