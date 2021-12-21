@@ -1,0 +1,10 @@
+{
+    "name": "Java Library CI with Maven",
+    "description": "Manages the complete Lifecycle of a Java Library packaged with Maven (e.g build, test, publish ...)",
+    "categories": [
+        "Java", "Maven POM"
+    ],
+    "filePatterns": [
+        "pom.xml$"
+    ]
+}
