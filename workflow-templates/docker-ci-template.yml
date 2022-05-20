@@ -18,10 +18,6 @@ on:
   schedule:
     # Build every night at 1am
     - cron: '0 1 * * *'
-  # This passes the secrets from calling workflow to the called workflow
-  secrets:
-    DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-    DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
 jobs:
   build:
     # This workflow defines how a maven package is built, tested and published.
@@ -41,3 +37,7 @@ jobs:
       #   foo: bar
       # If your actions generate an artifact in a previous build step, you can tell this workflow to download it
       # artifact-name: '' # the default '' doesn't try to download an artifact
+    # This passes the secrets from calling workflow to the called workflow
+    secrets:
+      DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+      DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
