@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.1.0 - 2022-05-20]
+### Added
+- Added a template for Building Docker Images
 ## [1.0.2 - 2021-12-21]
 ### Fixed
 - Moved workflow-templates directory to project root. This should make the template defined there visible
