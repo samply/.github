@@ -1,0 +1,10 @@
+{
+    "name": "Docker CI",
+    "description": "Builds a Docker Image, afterwards scanning it for security issues and finally pushes the images to Docker Hub",
+    "categories": [
+        "Docker"
+    ],
+    "filePatterns": [
+        "Dockerfile$"
+    ]
+}
