@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.1.3 - 2022-05-20]
+### Fixed
+- Moved docker-ci-template.properties.json to the workflow-templates directory
 ## [1.1.2 - 2022-05-20]
 ### Fixed
 - Moved Secrets Section in Docker CI Template to the build job
