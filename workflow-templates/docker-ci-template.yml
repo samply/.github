@@ -39,7 +39,10 @@ jobs:
       # Define the target platforms of the docker build (default "linux/amd64,linux/arm64/v8")
       # build-platforms: "linux/amd64"
       # If your actions generate an artifact in a previous build step, you can tell this workflow to download it
+      # '*' will download all artifacts to subdirectories.
       # artifact-name: '' # the default '' doesn't try to download an artifact
+      # You can disable security scans, e.g. for private repositories (default: true => enabled)
+      # security-scans: true
     # This passes the secrets from calling workflow to the called workflow
     secrets:
       DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
