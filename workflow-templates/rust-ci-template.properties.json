@@ -1,0 +1,11 @@
+{
+    "name": "Rust CI",
+    "description": "Builds a Rust project, then builds Docker Image using docker-ci",
+    "categories": [
+        "Rust",
+        "Docker"
+    ],
+    "filePatterns": [
+        "^Cargo.toml$"
+    ]
+}
