@@ -1,12 +1,9 @@
-name: Build with rust and docker
+name: Rust CI
 
 on:
+  pull_request:
   push:
   workflow_dispatch:
-  pull_request:
-  schedule:
-    # Fetch new base image updates every night at 1am
-    - cron: '0 1 * * *'
 
 jobs:
   build-with-samply:
@@ -14,13 +11,9 @@ jobs:
     with:
       image-prefix: "samply/"
       components: '[ "putyourcratenamehere" ]'
-      # Push images to either: dockerhub, ghcr, both, none.
-      push-to: ${{ (github.ref_protected == true || github.event_name == 'workflow_dispatch') && 'dockerhub' || 'ghcr' }}
+      test-via-script: false # false: tests via cargo test. true: Test via ./dev/test ci [featurename]
+      #push-to: auto
       #architectures: '[ "amd64", "arm64" ]'
-      #profile: debug
-      # false: tests via cargo test. true: Tesst via ./dev/test ci [featurename]
-      test-via-script: false
-      # Define all features here, if any. (default: [ "" ])
       #features: '[ "" ]'
     secrets:
       DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
